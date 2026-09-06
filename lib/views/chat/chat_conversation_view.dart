@@ -82,7 +82,6 @@ class _ChatConversationViewState extends State<ChatConversationView> {
     }
   }
 
-  /// Open target user's full profile view on Avatar tap
   Future<void> _openTargetUserProfile() async {
     showDialog(
       context: context,
@@ -171,7 +170,6 @@ class _ChatConversationViewState extends State<ChatConversationView> {
     }
   }
 
-  /// Show modal sheet to choose photo or video from Camera/Gallery
   void _showMediaPickerOptions() {
     showModalBottomSheet(
       context: context,
@@ -248,7 +246,6 @@ class _ChatConversationViewState extends State<ChatConversationView> {
     );
   }
 
-  /// Pick photo/video, validate video length <= 30s, upload to Cloudinary and send message
   Future<void> _pickAndSendMedia({
     required ChatMessageType type,
     required ImageSource source,
@@ -1205,7 +1202,6 @@ class _ChatConversationViewState extends State<ChatConversationView> {
     );
   }
 
-  /// Render Message Item matching Interest Channel stream layout
   Widget _buildMessage(ChatMessage message, Map<String, dynamic>? chatDocData) {
     if (message.type == ChatMessageType.system) {
       return _buildSystemMessage(message);
